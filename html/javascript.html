@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <!-- criando um procedimento em javascript-->
+    <script>
+        // alert("Sejam todos bem vindos!!!");
+
+        /*
+        var empresa = "Gama Academy";
+        var frase= "Sejam todos bem vindos a ";
+        alert (frase+empresa);*/
+
+        /*
+        var nome= prompt ("Seja bem vindo, qual o seu nome?","Insira o seu nome");
+        alert ("Prezado(a) "+nome+ " estamos felizes em telo você aqui conosco");
+        */
+
+        // como criar uma função em js
+        function funcao1()
+        {
+            alert ("Olá eu sou uma mensagem");
+        }
+
+        function validar()
+        {
+            var nome=fomulario_contato.nome.value;
+            var email=fomulario_contato.email.value;
+            var senha=fomulario_contato.senha.value;
+
+            if(nome==""){
+                alert("Preencha o campo nome, pois é obrigatório");
+                fomulario_contato.nome.focus();
+                return false;
+            }
+
+            if(email=="" || email.indexOf('@')==-1){
+                alert("Preencha o campo obrigatório com um email válido");
+                fomulario_contato.email.focus();
+                return false;
+            }
+
+            if(senha=="" || senha.length<=5){
+                alert("O campo senha é obrigatório com no mínimo 6 dígitos");
+                fomulario_contato.senha.focus();
+                return false;
+            }
+
+            alert ("Seja bem vindo "+nome+ " estaremos enviando o conteúdos dos nossos cursos para o email "+email);
+        }
+
+
+    </script>
+
+</head>
+<body>
+    
+    <!--
+    <h3>Olá seja bem vindo</h3>
+    <br>
+    <input type="button" onclick="funcao1()" value="Me Click">-->
+
+    <form id="fomulario_contato" method="POST">
+        Nome:<input type="text" name="nome"><br><br>
+        Email:<input type="text" name="email"><br><br>
+        Senha:<input type="password" name="senha"><br><br>
+
+        <input type="submit" onclick="return validar()" value="E N V I A R ">
+
+    </form>
+</body>
+</html>
